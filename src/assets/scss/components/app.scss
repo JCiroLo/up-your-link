@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  gap: $unit;
+  background-color: var(--color-background);
+  @include transition("background-color");
+
+  .app-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: $unit $unit $unit 0;
+    border-radius: $unit;
+    overflow: hidden;
+    background-color: var(--color-foreground);
+    @include transition("background-color");
+
+    main{
+      height: calc(100vh - $unit * 2);
+      overflow-y: auto;
+    }
+  }
+}

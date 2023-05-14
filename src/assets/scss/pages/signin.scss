@@ -1,0 +1,27 @@
+.signin-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - $unit * 2);
+
+  section {
+    padding: $unit * 2;
+    border-radius: $unit * 2;
+    background-color: var(--color-element--hover);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: $unit;
+
+      h1 {
+        margin-bottom: $unit;
+        text-align: center;
+      }
+
+      button.button-component{
+        justify-content: center;
+      }
+    }
+  }
+}

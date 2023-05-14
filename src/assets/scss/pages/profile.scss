@@ -1,0 +1,84 @@
+.profile-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .profile-cover-image {
+    position: relative;
+    height: max(33vh, 10rem);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(0deg, map-get($colors-dark, foreground), transparent 33%);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    h1 {
+      position: absolute;
+      z-index: 1;
+      bottom: $unit * 2;
+      color: white;
+    }
+  }
+
+  .profile-info {
+    display: flex;
+    justify-content: space-between;
+
+    section.profile-posts {
+      flex: 0 0 66%;
+      display: flex;
+      flex-direction: column;
+      gap: $unit * 2;
+      margin-top: $unit * 2;
+    }
+
+    section.profile-summary {
+      position: sticky;
+      top: calc(max(33vh, 10rem) / 2 + $unit);
+      flex: 0 0 25%;
+      display: flex;
+      flex-direction: column;
+      gap: $unit * 2;
+      height: max-content;
+      overflow: hidden;
+      border-radius: $unit;
+      translate: 0 calc(max(33vh, 10rem) / 2 * -1);
+      background-color: var(--color-component);
+
+      .profile-avatar {
+        position: relative;
+
+        img {
+          width: 100%;
+          aspect-ratio: 1;
+          object-fit: cover;
+        }
+      }
+
+      .profile-description {
+        padding: 0 $unit * 2;
+
+        p {
+          font-weight: 500;
+        }
+      }
+
+      .profile-actions {
+        display: flex;
+        padding: 0 $unit * 2 $unit * 2 $unit * 2;
+      }
+    }
+  }
+}

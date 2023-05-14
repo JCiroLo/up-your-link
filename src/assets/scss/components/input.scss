@@ -1,0 +1,28 @@
+.input-component {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $unit;
+  padding: 0 $unit;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background-color: var(--color-component);
+
+  .prefix-element,
+  .sufix-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  input {
+    all: unset;
+    flex: 1;
+    padding: $unit 0;
+    
+    &::placeholder{
+      font-weight: 500;
+    }
+  }
+}

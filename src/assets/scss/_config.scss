@@ -1,0 +1,67 @@
+$unit: 8px;
+
+// LAYOUT
+
+$border-radius: $unit * 4;
+
+$height-header: $unit * 6;
+
+$width-sidebar: $unit * 7;
+$width-sidebar-active: $unit * 20;
+
+// COLORS
+
+$colors-dark: (
+  main: #f1c40f,
+  main--hover: #f1c40f83,
+  background: #17171c,
+  foreground: #252631,
+  font: #d3d3d3,
+  component: rgba(#808080, 0.2),
+  element--hover: rgba(#808080, 0.1),
+);
+
+$colors-light: (
+  main: #0e606c,
+  main--hover: #0e606c83,
+  background: #e3e3e3,
+  foreground: white,
+  font: #676767,
+  component: rgba(#808080, 0.2),
+  element--hover: rgba(#808080, 0.1),
+);
+
+// TRANSITION
+
+$transition-duration: 0.2s ease-out;
+
+@mixin transition($properties...) {
+  $value: "";
+  @each $property in $properties {
+    $value: $value + $property + " " + $transition-duration + ", ";
+  }
+  transition: #{$value};
+}
+
+:export {
+  color: {
+    dark: {
+      main: map-get($colors-dark, main);
+      main--hover: map-get($colors-dark, main--hover);
+      background: map-get($colors-dark, background);
+      foreground: map-get($colors-dark, foreground);
+      font: map-get($colors-dark, font);
+      component: map-get($colors-dark, component);
+      element--hover: map-get($colors-dark, element--hover);
+    }
+    light: {
+      main: map-get($colors-light, main);
+      main--hover: map-get($colors-light, main--hover);
+      background: map-get($colors-light, background);
+      foreground: map-get($colors-light, foreground);
+      font: map-get($colors-light, font);
+      component: map-get($colors-light, component);
+      element--hover: map-get($colors-light, element--hover);
+    }
+  }
+}

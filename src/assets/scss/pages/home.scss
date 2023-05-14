@@ -1,0 +1,60 @@
+.home-page {
+  padding: $unit $unit $unit * 4 $unit;
+
+  section.home-landing {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 33vh;
+    margin-top: $height-header;
+    margin-bottom: $unit * 4;
+    padding: $unit * 4;
+    border-radius: $border-radius;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--color-main);
+    color: var(--color-foreground);
+    @include transition("background-color", "color");
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--fZ8kJHEQ--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nphrgz8yfnjylrwfr0yl.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      mix-blend-mode: color-dodge;
+    }
+
+    h1 {
+      font-size: max(6vmax, 4em);
+    }
+
+    p {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+  }
+
+  section.home-recent-posts {
+    display: flex;
+    flex-direction: column;
+    gap: $unit * 2;
+
+    h2 {
+      font-size: 1.25em;
+    }
+
+    a.post-component {
+      width: 50%;
+    }
+  }
+}
