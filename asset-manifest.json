@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/up-your-link/static/css/main.e7d24d0a.css",
+    "main.js": "/up-your-link/static/js/main.731dfd9b.js",
+    "static/media/favicon-light.png": "/up-your-link/static/media/favicon-light.20bd518eb1daaba6a361.png",
+    "static/media/favicon-dark.png": "/up-your-link/static/media/favicon-dark.8b50110a4f1cf847542a.png",
+    "index.html": "/up-your-link/index.html",
+    "main.e7d24d0a.css.map": "/up-your-link/static/css/main.e7d24d0a.css.map",
+    "main.731dfd9b.js.map": "/up-your-link/static/js/main.731dfd9b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7d24d0a.css",
+    "static/js/main.731dfd9b.js"
+  ]
+}
